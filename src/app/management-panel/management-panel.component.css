@@ -1,0 +1,163 @@
+.management-panel {
+    background-color: #EBEBEB;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.row {
+    padding: 15px 20px;
+}
+
+.route > span > span {
+    margin-right: 15px;
+}
+
+.management-panel .toolbar > * {
+    display: inline-block;
+}
+
+.management-panel .toolbar > .title {
+    font-size: 24px;
+    max-width: 50%;
+}
+
+.management-panel .toolbar > .title > i {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+.management-panel .toolbar > .product-container {
+    float: right;
+}
+
+.management-panel .toolbar > .product-container > label {
+    margin-right: 15px;
+}
+
+.management-panel > .panels {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.management-panel > .panels > .panel {
+    height: 100%;
+    background: white;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(179,179,179,1);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(179,179,179,1);
+    box-shadow: 0px 0px 16px 0px rgba(179,179,179,1);
+}
+
+.management-panel > .panels > .panel > .title {
+    padding: 30px;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 20px;
+}
+
+.panel {
+    position: relative;
+}
+
+.panel.alerts > .title {
+    color: #24618e;
+}
+
+.panel.shortcuts {
+    float: left;
+    width: 60%;
+}
+
+.panel.alerts {
+    float: right;
+    width: 38%;
+}
+
+.panel-content-container {
+    position: absolute;
+    top: 84px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.panel-content-container > .panel-content > .title,
+.panel-content-container > .panel-content > .row {
+    margin-bottom: 10px;
+}
+
+.panel-content {
+    position: absolute;
+    padding: 30px;
+}
+
+.panel-content.operational {
+    top: 0;
+    right: 35%;
+    bottom: 0;
+    left: 0;
+    border-right: 1px solid #F0F0F0;
+}
+
+.panel-content.operational button {
+    width: 45%;
+}
+
+.panel-content.operational .panel-row > button:first-child {
+    float: left;
+}
+
+.panel-content.operational .panel-row > button:nth-child(2) {
+    float: right;
+}
+
+.panel-content.general {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 65%;
+}
+
+.panel-content.general button {
+    width: 100%;
+}
+
+.panel-content button {
+    border: 1px solid #24618e;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.panel-content button:hover {
+    background-color: #6f8fc4;
+    color: #f1f1f1;
+}
+
+.panel.alerts > .alert-info {
+    font-size: 12px;
+    position: absolute;
+    right: 30px;
+    top: 35px;
+}
+
+.panel.alerts > .panel-content-container {
+    padding: 20px;
+}
+
+.panel.alerts .panel-row {
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.panel.alerts .panel-row > * {
+    width: 45%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 50px;
+    display: inline-block;
+}

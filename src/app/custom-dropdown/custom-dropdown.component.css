@@ -1,0 +1,72 @@
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-selected {
+    border: 1px solid #24618e;
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: white;
+}
+
+.custom-dropdown i:not(.fa-angle-double-down) {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-size: 18px;
+}
+
+.custom-dropdown i:not(.fa-angle-double-down) + span {
+    margin-left: 25px;
+}
+
+.dropdown-selected > i.fa-angle-double-down {
+    position: absolute;
+    color: #24618e;
+    right: 10px;
+    top: 6px;
+}
+
+.dropdown-options {
+    position: absolute;
+    overflow: auto;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+
+.dropdown-options > button {
+    position: relative;
+    display: block;
+    border: 1px solid #24618e;
+    border-top: 0;
+    text-align: left;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.custom-dropdown.dark .dropdown-options, .custom-dropdown.dark .dropdown-selected {
+    background-color: #00233D;
+    color: #f1f1f1;
+}
+
+.dropdown-options > button.active {
+    background: #5f79a4;
+    color: #f1f1f1;
+}
+
+.dropdown-options > button:hover {
+    background: #6f8fc4;
+    color: #f1f1f1;
+}
+
+.custom-dropdown.dark .dropdown-options > button.active {
+    background-color: #010f2e;
+}
+
+.custom-dropdown.dark .dropdown-options > button:hover {
+    background-color: #01133b;
+}

@@ -1,0 +1,8 @@
+<div class="receivables-discounting">
+    <div class="row route">
+        <span *ngFor="let step of route; index as i">
+            <span>{{ step }}</span>
+            <span *ngIf="i < route.length - 1">></span>
+        </span>
+    </div>
+</div>

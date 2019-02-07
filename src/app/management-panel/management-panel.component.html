@@ -1,0 +1,66 @@
+<div class="management-panel">
+    <div class="row route">
+        <span *ngFor="let step of route; index as i">
+            <span>{{ step }}</span>
+            <span *ngIf="i < route.length - 1">></span>
+        </span>
+    </div>
+    <div class="row toolbar">
+        <div class="title">
+            <i class="fas fa-{{ icon }}"></i>
+            {{ title }}
+        </div>
+        <div class="product-container">
+            <label>Produto:</label>
+            <custom-dropdown id="products-dropdown" 
+                [options]="products" 
+                width="200px" 
+                [onChange]="onChangeProducts">
+            </custom-dropdown>
+        </div>
+    </div>
+    <div class="panels">
+        <div class="shortcuts panel">
+            <div class="title">Atalhos</div>
+            <div class="panel-content-container">
+                <div class="panel-content operational">
+                    <div class="title">Operacional</div>
+                    <div class="panel-row">
+                        <button>Envio</button>
+                        <button>Assinatura</button>
+                    </div>
+                    <div class="panel-row">
+                        <button>Envio de duplicatas</button>
+                        <button>Assinatura Digital</button>
+                    </div>
+                    <div class="panel-row">
+                        <button>Nova Operação</button>
+                    </div>
+                </div>
+                <div class="panel-content general">
+                    <div class="title">Geral</div>
+                    <div class="panel-row">
+                        <button>Carteira</button>
+                    </div>
+                    <div class="panel-row">
+                        <button>Instruções</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alerts panel">
+            <div class="title">Alertas</div>
+            <div class="alert-info">{{ alertInfo }}</div>
+            <div class="panel-content-container">
+                <div class="panel-row" *ngFor="let alert of alerts">
+                    <div>{{ alert.n }} {{ alert.type }}</div>
+                    <custom-dropdown id="alert-{{ alert.id }}" 
+                        [options]="actions" 
+                        width="200px" 
+                        *ngIf="alert.hasAction">
+                    </custom-dropdown>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="custom-dropdown" [ngStyle]="{width: width}" [ngClass]="schema">
+    <button class="dropdown-selected" (click)="showDropdown = !showDropdown" id="{{ id }}">
+        <i *ngIf="selected.icon" class="fas fa-{{selected.icon}}"></i>
+        <span>{{ selected.text }}</span>
+        <i class="fas fa-angle-double-down"></i>
+    </button>
+    <div class="dropdown-options" *ngIf="showDropdown">
+        <button *ngFor="let option of options" 
+            [ngClass]="{active: option === selected}" 
+            (click)="select(option)">
+            <i *ngIf="option.icon" class="fas fa-{{option.icon}}"></i>
+            <span>{{ option.text }}</span>
+        </button>
+    </div>
+</div>

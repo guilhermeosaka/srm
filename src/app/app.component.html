@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<div class="sidebar">
+    <div class="search-container top-section">
+        <div class="search-input">
+            <input type="text" placeholder="Pesquise Aqui">
+        </div>
+        <button>
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+    <div *ngFor="let menuItem of menuItems" class="menu-item" [ngClass]="{active: menuItem.path === router.url}" routerLink="{{ menuItem.path }}">
+        <i class="fas fa-{{ menuItem.icon }}"></i>
+        {{ menuItem.name }}
+        <div class="arrow-left"></div>
+    </div>
+</div>
+<div class="content">
+    <div class="top-bar top-section">
+        <img src="../assets/imgs/srm-logo.png" class="srm-logo">
+        <div class="toolbar">
+            <label class="grupo-economico">Grupo Econômico:</label>
+            <custom-dropdown id="economic-groups-dropdown" 
+                [options]="economicGroups" 
+                width="200px" 
+                [onChange]="onChangeEconomicGroups">
+            </custom-dropdown>
+            <custom-dropdown id="profile-options-dropdown" 
+                [options]="profileOptions" 
+                width="200px" 
+                schema="dark" 
+                [selectable]="false" 
+                [onChange]="onChangeProfileOptions">
+            </custom-dropdown>
+            <div class="notification">
+                <i class="fas fa-bell"></i>
+                <span class="n-notifications">{{ nNotifications }}</span>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

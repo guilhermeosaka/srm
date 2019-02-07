@@ -1,0 +1,17 @@
+.receivables-discounting {
+    background-color: #EBEBEB;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.row {
+    padding: 15px 20px;
+}
+
+.route > span > span {
+    margin-right: 15px;
+}

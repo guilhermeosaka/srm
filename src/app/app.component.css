@@ -1,0 +1,161 @@
+body {
+    background-color: #cfcdcd;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+input, textarea, select, button {
+    color: inherit;
+}
+
+*:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+i {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+/* sidebar */
+.sidebar {
+    width: 300px;
+    background-color: #00233D;
+    height: 100%;
+}
+
+.top-section {
+    height: 80px;
+    background-color: white;
+}
+
+.search-container {
+    display: table;
+    vertical-align: top;
+    width: 100%;
+}
+
+.search-container > * {
+    display: table-cell;
+}
+
+.search-container > .search-input {
+    vertical-align: middle;
+}
+
+.search-container > .search-input > input {
+    border: none;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-container > button {
+    height: 80px;
+    width: 100%;
+}
+
+.search-container i {
+    color: #a0a0a0;
+}
+
+.sidebar > .menu-item {
+    color: white;
+    padding: 15px;
+    border-bottom: 2px solid #24618e;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar > .menu-item.active {
+    background-color: #010f2e;
+}
+
+.sidebar > .menu-item:hover {
+    background-color: #010f2e;
+}
+
+.sidebar > .menu-item > i {
+    margin-right: 10px;
+}
+
+.sidebar > .menu-item.active > .arrow-left {
+    position: absolute;
+    top: 12px;
+    right: -4px;
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-right:15px solid #eaeaea; 
+    border-bottom: 15px solid transparent; 
+}
+
+/* content */
+.content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 304px;
+    background-color: #EBEBEB;
+}
+
+.content > .top-bar {
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+.content > .top-bar > .toolbar {
+    float: right;
+    height: 100%;
+    padding-top: 6px;
+}
+
+.content > .top-bar > .toolbar > * {
+    margin-left: 15px;
+}
+
+.srm-logo {
+    width: 150px;
+}
+
+.content > .top-bar > .toolbar > .notification {
+    position: relative;
+    display: inline-block;
+    margin-left: -4px;
+    padding: 9px 6px 10px 6px;
+    background-color: #4997D1;
+    color: white;
+    width: 35px;
+    text-align: center;
+}
+
+.content > .top-bar > .toolbar > .notification > i {
+    font-size: 16px;
+}
+
+.n-notifications {
+    position: absolute;
+    font-size: 10px;
+    background-color: red;
+    border-radius: 20px;
+    width: 18px;
+    height: 15px;
+    padding: 2px;
+    padding-top: 5px;
+    top: 0;
+    right: 0;
+}
